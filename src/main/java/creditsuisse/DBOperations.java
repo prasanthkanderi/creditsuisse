@@ -25,14 +25,13 @@ public class DBOperations implements DbOpInterface{
 	         Class.forName("org.hsqldb.jdbc.JDBCDriver");
 	         //Creating the connection with HSQLDB
 	         System.out.println("jdbc class imported");
-	         con = DriverManager.getConnection("jdbc:hsqldb:file:\\creditsuisse\\logdb", "SA", "");
+	         con = DriverManager.getConnection("jdbc:hsqldb:file:logdb", "SA", "");
 	         stmt = con.createStatement();
 	         if (con!= null){
-	            System.out.println("Connection created successfully");
+	        	 logger.info("Connection created successfully");
 
-	            
 	         }else{
-	            System.out.println("Problem with creating connection");
+	        	 logger.error("Problem with creating connection");
 	         }
 	      
 	      }  catch (Exception e) {
@@ -101,7 +100,7 @@ public class DBOperations implements DbOpInterface{
 			 createTable("LogTable");
 			 Properties connectionProperties = new Properties();
 			 connectionProperties.put("driver", "org.hsqldb.jdbc.JDBCDriver");
-			 connectionProperties.put("url", "jdbc:hsqldb:file:\\creditsuisse\\logdb");
+			 connectionProperties.put("url", "jdbc:hsqldb:file:logdb");
 			 connectionProperties.put("user", "SA");
 			 connectionProperties.put("password", "");
 
@@ -113,8 +112,6 @@ public class DBOperations implements DbOpInterface{
 		{
 			logger.error("exception occuerred", e.fillInStackTrace());
 		}
-
-		 
 
 	}
 	

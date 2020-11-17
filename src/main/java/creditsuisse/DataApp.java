@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public class DataApp {
 
-public static void main(String a[]){
+public static void main(String args[]){
 
 	Logger logger = LoggerFactory.getLogger(DataApp.class);
     logger.info("Starting the Session");
@@ -20,7 +20,7 @@ public static void main(String a[]){
 
     try {
     	
-    	Dataset<Row> csv = spark.read().format("json").option("header","true").load("C:\\Users\\pranth\\Desktop\\creditsuisse\\logfile.txt");
+    	Dataset<Row> csv = spark.read().format("json").option("header","true").load(args[0]);
     	logger.info("Converted Logfile.txt to Dataset");
     	
     	logger.debug("The logfile content is:");
