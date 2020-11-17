@@ -10,6 +10,8 @@
       java -jar jarpath logfile.txt path
       ex: java -jar creditsuisse-0.0.1-SNAPSHOT D:\creditsuisse\logfile.txt
  
- Results:
+ 
  Results(logging file, hsqldb files) will be stored in current directory.
+ 
+ My Results are uploaded in results folder
  
