@@ -8,5 +8,5 @@
  
  Launch Command window use the below command to run the jar.
  
- java -jar <jarname> <logfile.txt path>
+ java -jar <jar name> <logfile.txt path>
  
